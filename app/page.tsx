@@ -16,6 +16,7 @@ import StatsBanner from "./components/StatsBanner";
 import Footer from "./components/Footer";
 import FAQ from "./components/FAQ";
 import TradeShowcase from "./components/TradeShowcase";
+import MentorMessage from "./components/MentorMessage";
 
 export default function Home() {
   return (
@@ -96,6 +97,8 @@ export default function Home() {
 
           {/* Block 4: Mentorship Pricing & The Client Toolkit Offer (₦10,500 Markdown) */}
           <PricingPlans />
+
+          <MentorMessage />
 
           <FAQ />
 

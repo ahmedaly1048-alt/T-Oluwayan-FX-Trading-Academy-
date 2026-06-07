@@ -11,9 +11,9 @@ export default function Hero() {
 
   // Array of background images for the slider
   const backgroundImages = [
-    "/hero1.jpg", // Add your first background image (e.g., trading chart, market screen)
-    "/hero2.jpg", // Add your second background image (e.g., forex trading floor)
-    "/hero4.jpg", // Add your third background image (e.g., financial conference)
+    "/hero1.jpg",
+    "/hero2.jpg",
+    "/hero4.jpg",
   ];
 
   useEffect(() => {
@@ -38,7 +38,7 @@ export default function Hero() {
             }`}
           >
             <Image
-              src={image} // Different image for each slide
+              src={image}
               alt={`Forex Training Background Slide ${index + 1}`}
               fill
               priority={index === 0}
@@ -49,39 +49,39 @@ export default function Hero() {
           </div>
         ))}
         {/* Ambient Dark Layer Mask */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-br from-black/75 via-black/65 to-black/75" />
       </div>
 
-      {/* 2. CENTER CONTENT CONTAINER */}
-      <div className="relative max-w-4xl mx-auto text-center z-20 flex flex-col items-center justify-center pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      {/* 2. CENTER CONTENT CONTAINER (Tightened layout bounds) */}
+      <div className="relative max-w-2xl mx-auto text-center z-20 flex flex-col items-center justify-center pt-28 pb-16 px-4 sm:px-6">
         
-        {/* Headline */}
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-[1.15] mb-6 drop-shadow-sm">
+        {/* Compact Balanced Headline */}
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-[1.2] mb-4 drop-shadow-sm">
           Welcome to <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-100 to-white">
-            T'Oluwayan FX Academy!
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-200 to-white">
+            T'Oluwayan FX Academy
           </span>
         </h1>
 
-        {/* Platform-centric Sub-headline Description */}
-        <p className="text-sm sm:text-base md:text-lg text-gray-200/90 max-w-3xl font-medium leading-relaxed mb-10 px-2 drop-shadow">
-          Start your journey to mastering Forex Trading with one of the best elite trading networks in the world! 
-          Go from a beginner to an advanced FX trader with the combined expertise of our global institutional desk at{" "}
-          <span className="text-white font-bold tracking-wide">T'OLUWAYAN FX</span>. Enroll now to gain access to 
-          over 80 in-depth professional curriculums that carefully demystify the extreme complexities of the global financial markets.
+        {/* Clean, high-density structural subtitle block */}
+        <p className="text-xs sm:text-sm md:text-[15px] text-gray-300/90 max-w-xl font-medium leading-relaxed mb-8 px-2 drop-shadow">
+          Start your journey to mastering Forex Trading with one of the best elite networks in the world. 
+          Go from beginner to advanced with the combined expertise of our global institutional desk at{" "}
+          <span className="text-white font-bold tracking-wide">T'OLUWAYAN FX</span>. Enroll now to access 
+          over 80 professional curriculums demystifying global financial market complexities.
         </p>
 
-        {/* Dual Call to Action Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+        {/* Scaled-down Call to Action Interfaces */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 w-full sm:w-auto">
           
-          {/* Primary Action Button (Asymmetric Rounding) */}
+          {/* Primary Action Button */}
           <Link
             href="/enroll"
-            className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4.5 bg-[#F23E4D] text-white text-[15px] font-bold tracking-wide rounded-tl-[24px] rounded-br-[24px] rounded-tr-[4px] rounded-bl-[4px] hover:bg-[#d63240] transition-all duration-200 transform hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-red-900/30"
+            className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3.5 bg-[#F23E4D] text-white text-[14px] font-bold tracking-wide rounded-tl-[18px] rounded-br-[18px] rounded-tr-[3px] rounded-bl-[3px] hover:bg-[#d63240] transition-all duration-200 transform hover:scale-[1.01] active:scale-[0.99] shadow-lg shadow-red-900/30 whitespace-nowrap"
           >
             Enroll with us now
             <svg
-              className="ml-2 w-4 h-4 animate-bounce mt-0.5"
+              className="ml-1.5 w-3.5 h-3.5 animate-bounce mt-0.5"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -91,14 +91,14 @@ export default function Hero() {
             </svg>
           </Link>
 
-          {/* Secondary Action Button (Transparent Outlined Asymmetric Rounding) */}
+          {/* Secondary Action Button */}
           <Link
             href="/signals"
-            className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4.5 bg-transparent border-2 border-white text-white text-[15px] font-bold tracking-wide rounded-tl-[4px] rounded-br-[4px] rounded-tr-[24px] rounded-bl-[24px] hover:bg-white/10 transition-all duration-200 transform hover:scale-[1.02] active:scale-[0.98]"
+            className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3.5 bg-transparent border-2 border-white text-white text-[14px] font-bold tracking-wide rounded-tl-[3px] rounded-br-[3px] rounded-tr-[18px] rounded-bl-[18px] hover:bg-white/10 transition-all duration-200 transform hover:scale-[1.01] active:scale-[0.99] whitespace-nowrap"
           >
             Get forex signals
             <svg
-              className="ml-2 w-4 h-4 stroke-current"
+              className="ml-1.5 w-3.5 h-3.5 stroke-current"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="2.5"
@@ -113,16 +113,16 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* 3. SLIDER DOTS INDICATOR - MOVED TO CENTER RIGHT */}
-      <div className="absolute top-1/2 right-6 transform -translate-y-1/2 z-20 flex flex-col gap-3">
+      {/* 3. SLIDER DOTS INDICATOR - CENTER RIGHT */}
+      <div className="absolute top-1/2 right-4 sm:right-6 transform -translate-y-1/2 z-20 flex flex-col gap-2.5">
         {[0, 1, 2].map((index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`transition-all duration-300 rounded-full ${
               index === currentSlide
-                ? "h-8 w-1.5 bg-[#F23E4D]"
-                : "h-3 w-1.5 bg-white/50 hover:bg-white/80"
+                ? "h-6 w-1 bg-[#F23E4D]"
+                : "h-2 w-1 bg-white/40 hover:bg-white/70"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />

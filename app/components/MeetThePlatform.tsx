@@ -65,7 +65,7 @@ export default function MeetThePlatform() {
             {/* Sleek Framed Image Layout with thin double ring borders */}
             <div className="relative w-full max-w-[420px] aspect-[4/5] rounded-[24px] overflow-hidden bg-gray-50 shadow-xl ring-1 ring-neutral-200 border-4 border-[#F23E4D] transition-all duration-300 hover:scale-[1.01] hover:shadow-2xl">
               <Image
-                src="/mentor1.jpeg"
+                src="/Tee 2.jpeg"
                 alt="Moibi Tunde - T'Oluwayan FX Profitability Analyst"
                 fill
                 priority
