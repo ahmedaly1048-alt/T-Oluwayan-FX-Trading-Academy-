@@ -17,6 +17,7 @@ import Footer from "./components/Footer";
 import FAQ from "./components/FAQ";
 import TradeShowcase from "./components/TradeShowcase";
 import MentorMessage from "./components/MentorMessage";
+import EcosystemCTA from "./components/EcosystemCTA";
 
 export default function Home() {
   return (
@@ -94,6 +95,8 @@ export default function Home() {
 
           {/* Block 3: Downloadable Learning Curriculum & Timetables */}
           <CurriculumSection />
+
+          <EcosystemCTA />
 
           {/* Block 4: Mentorship Pricing & The Client Toolkit Offer (₦10,500 Markdown) */}
           <PricingPlans />
