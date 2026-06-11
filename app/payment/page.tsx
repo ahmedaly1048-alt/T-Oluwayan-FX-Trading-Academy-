@@ -21,8 +21,7 @@ export default function PaymentSection() {
       name: "Standard Bootcamp",
       price: 150000,
       billingPeriod: "One-time Access",
-      description:
-        "Perfect for beginners looking to master foundational institutional mechanics and risk structures.",
+      description: "Perfect for beginners looking to master foundational institutional mechanics and risk structures.",
       features: [
         "Access to basic 40+ curriculum modules",
         "Live bi-weekly market sync sessions",
@@ -31,14 +30,12 @@ export default function PaymentSection() {
         "Email support channel desk",
       ],
     },
-
     {
       id: "growth",
       name: "Elite Mentorship",
       price: 350000,
       billingPeriod: "Full Academic Cycle",
-      description:
-        "Our signature network experience. Advanced order flow alignment, setups mapping, and deep live access.",
+      description: "Our signature network experience. Advanced order flow alignment, setups mapping, and deep live access.",
       features: [
         "Full access to all 80+ curriculum items",
         "Daily London/NY live trading room stream",
@@ -50,39 +47,43 @@ export default function PaymentSection() {
     },
   ];
 
-  const handlePayment = async (plan: typeof plans[0]) => {
-  try {
-    const response = await fetch("/api/paystack/initialize", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        email: "customer@example.com", // Dynamic email goes here later
-        amount: parseInt(plan.price.replace(/[^0-9]/g, "")), // Cleans "₦10,500" into a pure number 10500
-        planId: plan.title,
-      }),
-    });
-    const data = await response.json();
-    if (data.status && data.data?.authorization_url) {
-      window.location.href = data.data.authorization_url;
-    } else {
-      alert("Unable to initialize payment");
+  const handlePayment = async (plan: PaymentTier) => {
+    try {
+      const response = await fetch("/api/paystack/initialize", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: "customer@example.com", // Replace with logged-in user email dynamically later
+          amount: plan.price,
+          plan: plan.id,
+          // Telling Paystack where to send the user after successful payment
+          callback_url: `${window.location.origin}/payment/success`, 
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.status && data.data?.authorization_url) {
+        window.location.href = data.data.authorization_url;
+      } else {
+        alert("Unable to initialize payment");
+      }
+    } catch (error) {
+      console.error("Payment initialization failed:", error);
+      alert("Something went wrong");
     }
-  } catch (error) {
-    console.error(error);
-    alert("Something went wrong");
-  }
-};
+  };
 
   return (
     <section className="w-full bg-neutral-50 py-20 px-4 sm:px-6 lg:px-8 border-t border-b border-gray-200/60">
       <div className="max-w-4xl mx-auto">
         {/* HEADER */}
-
         <div className="text-center max-w-xl mx-auto mb-12">
           <h2 className="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight">
             Select Your Mentorship Plan
           </h2>
-
           <p className="text-gray-500 text-xs sm:text-sm mt-2">
             Click on a plan card to select it, then click the confirmation
             button to complete your secure payment via Paystack.
@@ -90,7 +91,6 @@ export default function PaymentSection() {
         </div>
 
         {/* PLANS */}
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch mb-10">
           {tiers.map((tier) => {
             const isSelected = selectedTier === tier.id;
@@ -110,7 +110,6 @@ export default function PaymentSection() {
                     <h3 className="text-base font-black text-gray-900 tracking-tight">
                       {tier.name}
                     </h3>
-
                     <div
                       className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${
                         isSelected ? "border-[#F23E4D]" : "border-gray-300"
@@ -130,7 +129,6 @@ export default function PaymentSection() {
                     <span className="text-3xl font-black text-gray-900 tracking-tight">
                       ₦{tier.price.toLocaleString()}
                     </span>
-
                     <span className="text-xs text-gray-400 font-medium">
                       / {tier.billingPeriod}
                     </span>
@@ -140,7 +138,6 @@ export default function PaymentSection() {
                     {tier.features.map((feature, i) => (
                       <li key={i} className="flex items-start gap-2.5 text-xs">
                         <Check className="w-3.5 h-3.5 text-[#F23E4D] mt-0.5 flex-shrink-0 stroke-[3]" />
-
                         <span className="text-gray-600 leading-tight">
                           {feature}
                         </span>
@@ -154,7 +151,6 @@ export default function PaymentSection() {
         </div>
 
         {/* PAYMENT FOOTER */}
-
         {(() => {
           const currentPlan = tiers.find((t) => t.id === selectedTier)!;
 
@@ -164,16 +160,13 @@ export default function PaymentSection() {
                 <span className="text-[10px] font-black tracking-widest text-[#F23E4D] uppercase block">
                   Selected Track
                 </span>
-
                 <h4 className="text-base font-bold text-gray-900">
                   {currentPlan.name}
                   {" — "}
-
                   <span className="text-emerald-600 font-black">
                     ₦{currentPlan.price.toLocaleString()}
                   </span>
                 </h4>
-
                 <p className="text-[11px] text-gray-400 max-w-xs leading-normal">
                   Your payment is processed securely through Paystack checkout.
                 </p>
