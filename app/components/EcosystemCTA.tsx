@@ -48,7 +48,7 @@ export default function EcosystemCTA() {
           
           {/* OPTION 1: TELEGRAM PUBLIC HUB */}
           <a
-            href="https://t.me/your_telegram_channel_username"
+            href="https://l.instagram.com/?u=https%3A%2F%2Ft.me%2Fearnlikepro26%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGn7FrAxMWPM9LmFuwBi8d8Q7eA_fZXXKVxJcscmtLhCDlzcBlmaE35s-wGd3I_aem_WsZWxmXrwtXtVM_QWlkhSA&e=AUAWpbxyNQeGfKWnOC0bVyePAuTgjTT8QVJwgxOrfmdzO8evq9IxrnOlyXOUWHxHxfqhSw8CPzYJj4p-5Lj7fv38J00A2uxZh3RD4VdvoVwpXIjwHoKF75wJAySLr-lAfo3OVxI"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative rounded-2xl bg-[#090D14] p-8 border border-neutral-800/80 flex flex-col justify-between transition-all duration-300 transform hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_0_40px_rgba(59,130,246,0.08)]"
@@ -86,7 +86,7 @@ export default function EcosystemCTA() {
 
           {/* OPTION 2: EXNESS BROKER ENVIRONMENT */}
           <a
-            href="https://one.exness-track.com/a/your_unique_referral_code"
+            href="https://l.instagram.com/?u=https%3A%2F%2Fone.exnessonelink.com%2Fa%2Fc_7ikhmuqp8l%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGndGBJvKZPrWJAtCLm-lbDWEUJ2M2bE89HLpnaWNT8rkmlGyZC5YDwi3Z9mAg_aem_rHMUQqPpob6HsfLdqW_TFA&e=AUD1hoMSwaR-HdBIUKUXrbPBCp3gPYSNtcUFPI13s25xQ8bYNv045WtY0EgNuZ6mAA0lAiZkdj9h5RmvvwfuNmhzYuWtjM8mv1ujswhEZeIDfVWRfgLftfGtrWHFq4xfCCzvqI4"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative rounded-2xl bg-[#090D14] p-8 border border-neutral-800/80 flex flex-col justify-between transition-all duration-300 transform hover:-translate-y-1 hover:border-amber-500/20 hover:shadow-[0_0_40px_rgba(245,158,11,0.04)]"

@@ -76,44 +76,55 @@ export default function Home() {
         <Navbar />
 
         <main className="w-full flex flex-col">
-
-          <Hero />
+          {/* Target for Home */}
+          <section id="home">
+            <Hero />
+          </section>
 
           <StatsBanner />
 
-          <MeetThePlatform />
+          {/* Target for About / Platform Introduction */}
+          <section id="about">
+            <MeetThePlatform />
+            <PlatformValue />
+            <PlatformJourney />
+          </section>
 
-          <PlatformValue />
-          
-          {/* Block 1: The Platform Journey & Team Origin Section */}
-          <PlatformJourney />
-
-          {/* Block 2: Academy Features & Offerings Breakdown */}
-          <FeaturesSection />
+          {/* Target for Features */}
+          <section id="features">
+            <FeaturesSection />
+          </section>
 
           <TradeShowcase />
 
-          {/* Block 3: Downloadable Learning Curriculum & Timetables */}
-          <CurriculumSection />
+          {/* Target for Curriculum */}
+          <section id="curriculum">
+            <CurriculumSection />
+          </section>
 
           <EcosystemCTA />
 
-          {/* Block 4: Mentorship Pricing & The Client Toolkit Offer (₦10,500 Markdown) */}
-          <PricingPlans />
+          {/* Target for Plans / Pricing */}
+          <section id="plans">
+            <PricingPlans />
+          </section>
 
           <MentorMessage />
 
-          <FAQ />
+          {/* Target for FAQs */}
+          <section id="faqs">
+            <FAQ />
+          </section>
 
-          <TestimonialsSection />
-
-          {/* Block 5: Student Trust Metrics, External Reviews, and Final Asymmetric Registration CTA */}
-          <MoreReviewsSection />
+          {/* Target for Reviews / Testimonials */}
+          <section id="reviews">
+            <TestimonialsSection />
+            <MoreReviewsSection />
+          </section>
 
         </main>
 
         <Footer/>
-
         {/* Premium Floating WhatsApp Dynamic Action Hub */}
         <a
           href="https://wa.me/YOUR_PHONE_NUMBER" 
