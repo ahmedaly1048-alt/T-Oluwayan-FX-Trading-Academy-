@@ -23,8 +23,8 @@ export default function PricingPlans() {
   const plans: Plan[] = [
     {
       title: "TOOLKIT OFFER",
-      price: "₦10,500",
-      originalPrice: "₦15,000",
+      price: "$75.00",
+      originalPrice: "$100.00",
       tag: "POPULAR CHOICE",
       subtitle: "What you will get with this toolkit...",
       features: [
@@ -40,7 +40,7 @@ export default function PricingPlans() {
     },
     {
       title: "3 MONTHS PLAN",
-      price: "₦138,000",
+      price: "$197.00",
       subtitle: "You will get everything in the toolkit plus...",
       features: [
         "Access to institutional video archive",
@@ -55,7 +55,7 @@ export default function PricingPlans() {
     },
     {
       title: "6 MONTHS PLAN",
-      price: "₦235,000",
+      price: "$339.00",
       tag: "BEST VALUE",
       subtitle: "You will get everything in the 3 months plus...",
       features: [
@@ -71,7 +71,7 @@ export default function PricingPlans() {
     },
     {
       title: "YEARLY PLAN",
-      price: "₦415,000",
+      price: "$500.00",
       tag: "TOP TIER",
       subtitle: "You will get everything in the 6 months plus...",
       features: [
