@@ -64,31 +64,16 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 md:h-24 gap-4 transition-all duration-300">
           
-          {/* 1. Brand Logo Configuration Area */}
-          <div className="flex-shrink-0 flex items-center min-w-[140px]">
-            <a href="#home" className="flex items-center">
-              <div className="relative h-10 w-40 sm:h-12 sm:w-44 flex items-center">
-                <Image
-                  src="/toluwayan-logo.png" 
-                  alt="T'Oluwayan FX Platform Logo"
-                  width={180}
-                  height={50}
-                  className="object-contain h-full w-auto brightness-0 invert"
-                  priority
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none';
-                    const parent = e.currentTarget.parentElement;
-                    if (parent && !parent.querySelector('.fallback-text')) {
-                      const textLogo = document.createElement('span');
-                      textLogo.className = 'fallback-text text-lg sm:text-xl font-black tracking-tight text-white whitespace-nowrap';
-                      textLogo.innerHTML = `T'Oluwayan <span class="text-[#F23E4D]">FX</span>`;
-                      parent.appendChild(textLogo);
-                    }
-                  }}
-                />
-              </div>
-            </a>
-          </div>
+         {/* 1. Brand Logo Configuration Area */}
+<div className="flex-shrink-0 flex items-center min-w-[140px]">
+  <a href="#home" className="flex items-center">
+    <div className="relative h-10 w-40 sm:h-12 sm:w-44 flex items-center">
+      <span className="text-lg sm:text-xl font-black tracking-tight text-white whitespace-nowrap">
+        T'Oluwayan <span className="text-[#F23E4D]">FX</span>
+      </span>
+    </div>
+  </a>
+</div>
 
           {/* 2. Desktop Navigation Links (Switches highlight color based on current scroll segment) */}
           <nav className="hidden xl:flex items-center justify-center gap-x-6 2xl:gap-x-8 flex-1 px-4">
